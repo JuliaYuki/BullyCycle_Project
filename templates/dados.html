@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dados - BullyCycle</title>
+    <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="stylesheet" href="../static/dados.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container flex space-between">
+        <div class="logo-white">
+          <div class="logo-circle-white"></div>
+          <span>BullyCycle</span>
+        </div>
+        <nav class="nav-white">
+          <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./dados.html">Dados</a></li>
+            <li><a href="#">Formulário</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="filtros">
+      <h2>Filtrar dados</h2>
+      <form id="filtro-form">
+        <label for="faixa-etaria">Faixa Etária:</label>
+        <select id="faixa-etaria">
+          <option value="todas">Todas</option>
+          <option value="crianca">Criança (5-12)</option>
+          <option value="adolescente">Adolescente (13-17)</option>
+          <option value="jovem">Jovem Adulto (18-25)</option>
+          <option value="adulto">Adulto (26+)</option>
+        </select>
+
+        <label for="tipo-bullying">Tipo de Bullying:</label>
+        <select id="tipo-bullying">
+          <option value="todos">Todos</option>
+          <option value="verbal">Verbal</option>
+          <option value="fisico">Físico</option>
+          <option value="cyber">Cyberbullying</option>
+          <option value="moral">Moral</option>
+        </select>
+
+        <label for="genero">Gênero:</label>
+        <select id="genero">
+          <option value="todos">Todos</option>
+          <option value="feminino">Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option value="outros">Outros</option>
+        </select>
+
+        <button type="submit">Aplicar</button>
+      </form>
+    </section>
+
+    <section class="cards-estatisticas">
+      <div class="card">
+        <h3>Total de Vítimas</h3>
+        <p class="dado">872</p>
+      </div>
+      <div class="card">
+        <h3>Denúncias Registradas</h3>
+        <p class="dado">312</p>
+      </div>
+      <div class="card">
+        <h3>Presenciaram Bullying</h3>
+        <p class="dado">654</p>
+      </div>
+    </section>
+
+    <section class="graficos">
+      <h2>Gráficos</h2>
+      <canvas id="graficoBarras"></canvas>
+    </section>
+
+    <script>
+      const ctx = document.getElementById("graficoBarras").getContext("2d");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Crianças", "Adolescentes", "Jovens Adultos", "Adultos"],
+          datasets: [
+            {
+              label: "Vítimas de Bullying",
+              data: [120, 320, 210, 80],
+              backgroundColor: "#3498db",
+              borderRadius: 6,
+            },
+            {
+              label: "Denúncias",
+              data: [45, 180, 70, 17],
+              backgroundColor: "#2ecc71",
+              borderRadius: 6,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                precision: 0,
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

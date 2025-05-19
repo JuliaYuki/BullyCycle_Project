@@ -1,0 +1,91 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.filtros {
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.filtros h2 {
+  margin-bottom: 10px;
+}
+
+.filtros form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.filtros label {
+  font-weight: 600;
+}
+
+.filtros select,
+.filtros button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filtros button {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.filtros button:hover {
+  background-color: #2980b9;
+}
+
+.cards-estatisticas {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  background-color: #fff;
+}
+
+.card {
+  background-color: #f5f7fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card .dado {
+  font-size: 2em;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.graficos {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+canvas {
+  width: 800px;
+  max-width: 800px;
+  margin: 30px auto;
+  display: block;
+}
