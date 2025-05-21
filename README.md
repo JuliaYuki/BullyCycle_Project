@@ -1,5 +1,5 @@
 
-# Projeto Anti-Bullying - Plataforma de Conscientização e Dados
+# Projeto BullyCycle - Plataforma de Conscientização e Dados
 
 Este projeto tem como objetivo ajudar na **conscientização, prevenção e combate ao bullying**, permitindo que instituições possam aplicar formulários de forma anônima, gerar seus próprios dados privados e, ao mesmo tempo, colaborar com estatísticas globais.
 
@@ -39,15 +39,8 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-- 🎨 Frontend (React com Vite)
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
 ### 3. Acesse no navegador
-* Frontend: http://localhost:5173
+* Frontend: http://localhost:5555
 
 * Backend/API: http://localhost:5000 (ou porta definida no app)
 
@@ -55,7 +48,7 @@ npm run dev
 ```bash
 plataforma-anti-bullying/
 ├── backend/        # API, Banco de Dados, lógica do servidor
-├── frontend/       # Interface do usuário (React/Vite)
+├── frontend/       # Interface do usuário
 ├── README.md
 └── .gitignore
 ```
